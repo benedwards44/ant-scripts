@@ -10,7 +10,7 @@ https://developer.salesforce.com/docs/atlas.en-us.daas.meta/daas/meta_developmen
 
 You will need to install ANT (if not already installed), and put the ant-salesforce.jar in the correct location (depending on OS).
 
-Following that, enter your options in the `build.properties` folder. Which include your username, password, URL and other options.
+Following that, enter your settings in the `build.properties` file, which includes your username, password, URL and other options.
 
 ## Commands
 
