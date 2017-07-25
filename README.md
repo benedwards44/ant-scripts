@@ -1,5 +1,7 @@
 # Force.com Migration Tool Sample Config
 
+This repo provides a simple setup of using ANT from your local machine to deploy and retrieve metadata with Salesforce.
+
 ## Setup
 
 Follow the instructions here:
