@@ -1,0 +1,38 @@
+<project name="Simple usage of Salesforce Ant tasks" default="test" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+    <target name="get">
+      <sf:retrieve username="${sf.username}" 
+        password="${sf.password}" 
+        serverurl="${sf.serverurl}" 
+        maxPoll="50" 
+        pollWaitMillis="50000"
+        retrieveTarget="retrieved"
+        unpackaged="retrieved/package.xml"/>
+    </target>
+
+    <target name="getChangeset">
+      <sf:retrieve username="${sf.username}" 
+        password="${sf.password}" 
+        serverurl="${sf.serverurl}" 
+        maxPoll="50" 
+        pollWaitMillis="50000"
+        retrieveTarget="changeSet"
+        packageNames="${sf.changesetName}" />
+    </target>
+
+    <target name="deploy">
+        <sf:deploy username="${sf.username}" 
+            password="${sf.password}" 
+            serverurl="${sf.serverurl}" 
+            maxPoll="50" 
+            pollWaitMillis="50000"
+            deployRoot="deploy"
+            testLevel="${sf.testLevel}"
+            checkOnly="${sf.checkOnly}" >
+        </sf:deploy>
+    </target>
+
+</project>
