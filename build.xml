@@ -35,4 +35,17 @@
         </sf:deploy>
     </target>
 
+    <target name="deploySpecificTests">
+        <sf:deploy username="${sf.username}" 
+            password="${sf.password}" 
+            serverurl="${sf.serverurl}" 
+            maxPoll="50" 
+            pollWaitMillis="50000"
+            deployRoot="deploy"
+            testLevel="RunSpecifiedTests"
+            checkOnly="${sf.checkOnly}" >
+            <runTest>MyTestClass</runTest>
+        </sf:deploy>
+    </target>
+
 </project>

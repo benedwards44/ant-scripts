@@ -31,3 +31,9 @@ Put your package.xml of what you want to retrieve, and type `ant get` in your co
 `ant getChangeset`
 
 Used to retrieve all contents of a changeset. Put your changeset name in the `build.properties` file and run `ant getChangeset` from the command line.
+
+### Deploy with Test Subset
+
+'ant deploySpecificTests'
+
+Use this to deploy by running just a subset of test methods. Update the `deploySpecificTests` deploy target in the `build.xml` file with the list of tests to run
