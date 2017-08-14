@@ -34,6 +34,6 @@ Used to retrieve all contents of a changeset. Put your changeset name in the `bu
 
 ### Deploy with Test Subset
 
-'ant deploySpecificTests'
+`ant deploySpecificTests`
 
 Use this to deploy by running just a subset of test methods. Update the `deploySpecificTests` deploy target in the `build.xml` file with the list of tests to run
